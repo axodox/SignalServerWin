@@ -86,9 +86,6 @@
     <ClCompile Include="outputs.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="suitest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="tiles.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -126,9 +123,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="models\sui.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="models\test.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -55,9 +55,7 @@
     <ClCompile Include="models\pel.cc" />
     <ClCompile Include="models\soil.cc" />
     <ClCompile Include="models\sui.cc" />
-    <ClCompile Include="models\test.cc" />
     <ClCompile Include="outputs.cc" />
-    <ClCompile Include="suitest.cc" />
     <ClCompile Include="tiles.cc" />
   </ItemGroup>
   <ItemGroup>

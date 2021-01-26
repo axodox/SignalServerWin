@@ -12,14 +12,15 @@
 #include "pel.hh"
 #include "egli.hh"
 #include "soil.hh"
-#include <pthread.h>
+#include <Windows.h>
+#include <mutex>
 
 #define NUM_SECTIONS 4
 
 namespace {
-	pthread_t threads[NUM_SECTIONS];
+	HANDLE threads[NUM_SECTIONS];
 	unsigned int thread_count = 0;
-	pthread_mutex_t maskMutex;
+	std::mutex maskMutex;
 	bool ***processed;
 	bool has_init_processed = false;
 
@@ -131,14 +132,12 @@ namespace {
 			value. */
 
 			if(!processed[indx][x][y]) {
-				pthread_mutex_lock(&maskMutex);
+				std::lock_guard<std::mutex> lock(maskMutex);
 
 				if(!processed[indx][x][y]) {
 					rtn = true;
 					processed[indx][x][y] = true;
 				}
-
-				pthread_mutex_unlock (&maskMutex);
 			}
 
 		}
@@ -150,9 +149,9 @@ namespace {
 		if(!has_init_processed)
 			init_processed();
 
-		int rc = pthread_create(&threads[thread_count], NULL, rangePropagation, arg);
-		if (rc)
-			fprintf(stderr,"ERROR; return code from pthread_create() is %d\n", rc);
+	  threads[thread_count] = CreateThread(nullptr, 0, [](LPVOID) -> DWORD{ rangePropagation(nullptr); return 0; }, nullptr, 0, 0);
+		if (threads[thread_count] == nullptr)
+			fprintf(stderr,"ERROR; return code from pthread_create() is %d\n", 0);
 		else
 			++thread_count;
 	}
@@ -161,9 +160,7 @@ namespace {
 	{
 		void* status;
 		for(unsigned int i=0; i<thread_count; i++) {
-			int rc = pthread_join(threads[i], &status);
-			if (rc)
-				fprintf(stderr,"ERROR; return code from pthread_join() is %d\n", rc);
+			WaitForSingleObject(threads[i], INFINITE);
 		}
 		thread_count = 0;
 	}
