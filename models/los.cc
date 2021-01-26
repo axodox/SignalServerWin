@@ -149,7 +149,7 @@ namespace {
 		if(!has_init_processed)
 			init_processed();
 
-	  threads[thread_count] = CreateThread(nullptr, 0, [](LPVOID) -> DWORD{ rangePropagation(nullptr); return 0; }, nullptr, 0, 0);
+	  threads[thread_count] = CreateThread(nullptr, 0, [](LPVOID arg) -> DWORD{ rangePropagation(arg); return 0; }, arg, 0, 0);
 		if (threads[thread_count] == nullptr)
 			fprintf(stderr,"ERROR; return code from pthread_create() is %d\n", 0);
 		else
