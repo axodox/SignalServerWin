@@ -496,7 +496,7 @@ int LoadSDF_SDF(char* name)
 
 	/* Parse filename for minimum latitude and longitude values */
 
-	if (sscanf(sdf_file, "%d:%d:%d:%d", &minlat, &maxlat, &minlon, &maxlon) != 4)
+	if (sscanf(sdf_file, "%d_%d_%d_%d", &minlat, &maxlat, &minlon, &maxlon) != 4)
 		return -EINVAL;
 
 	sdf_file[x] = '.';
@@ -694,7 +694,7 @@ int LoadSDF(char* name)
 	if (return_value == 0 || return_value < 0) {
 
 
-		sscanf(name, "%d:%d:%d:%d", &minlat, &maxlat, &minlon,
+		sscanf(name, "%d_%d_%d_%d", &minlat, &maxlat, &minlon,
 			&maxlon);
 
 		/* Is it already in memory? */
@@ -1659,11 +1659,11 @@ int LoadTopoData(int max_lon, int min_lon, int max_lat, int min_lat)
 
 				if (ippd == 3600)
 					snprintf(string, 19,
-						"%d:%d:%d:%d-hd", x,
+						"%d_%d_%d_%d-hd", x,
 						x + 1, ymin, ymax);
 				else
 					snprintf(string, 16,
-						"%d:%d:%d:%d", x,
+						"%d_%d_%d_%d", x,
 						x + 1, ymin, ymax);
 				if ((success = LoadSDF(string)) < 0) {
 					return -success;
@@ -1692,11 +1692,11 @@ int LoadTopoData(int max_lon, int min_lon, int max_lat, int min_lat)
 
 				if (ippd == 3600)
 					snprintf(string, 19,
-						"%d:%d:%d:%d-hd", x,
+						"%d_%d_%d_%d-hd", x,
 						x + 1, ymin, ymax);
 				else
 					snprintf(string, 16,
-						"%d:%d:%d:%d", x,
+						"%d_%d_%d_%d", x,
 						x + 1, ymin, ymax);
 				if ((success = LoadSDF(string)) < 0) {
 					return -success;
