@@ -49,7 +49,6 @@
     <ClCompile Include="models\ericsson.cc" />
     <ClCompile Include="models\fspl.cc" />
     <ClCompile Include="models\hata.cc" />
-    <ClCompile Include="models\itm.cc" />
     <ClCompile Include="models\itwom3.0.cc" />
     <ClCompile Include="models\los.cc" />
     <ClCompile Include="models\pel.cc" />
