@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <file name="SignalServer.Core.dll">
+    <activatableClass name="SignalServer.Core.RadioCoverageSimulation" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1"/>
+  </file>
+</assembly>

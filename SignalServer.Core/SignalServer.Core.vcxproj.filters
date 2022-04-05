@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="common.h">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="models\cost.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="models\ecc33.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="models\egli.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="models\ericsson.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="models\fspl.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="models\hata.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="image.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="image-ppm.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="inputs.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="models\itwom3.0.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="models\los.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="main.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="outputs.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="models\pel.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="models\soil.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="models\sui.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="tiles.hh">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="RadioCoverageSimulation.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="models\cost.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="models\ecc33.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="models\egli.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="models\ericsson.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="models\fspl.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="models\hata.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="image.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="image-ppm.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="inputs.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="models\itwom3.0.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="models\los.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="outputs.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="models\pel.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="models\soil.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="models\sui.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="tiles.cc">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="RadioCoverageSimulation.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="obj\$(Configuration)\Generated Files\module.g.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="models\README" />
+    <None Include="winrt.def">
+      <Filter>Interface</Filter>
+    </None>
+    <None Include="PropertySheet.props" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Simulation">
+      <UniqueIdentifier>{f1461fdb-a173-484e-91bb-e2f45daa6d1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{64e3f508-5342-40b1-8aae-67a27026f940}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="winrt.idl">
+      <Filter>Interface</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

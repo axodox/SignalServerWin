@@ -1,0 +1,10 @@
+namespace SignalServer.Core
+{
+  [default_interface]
+  runtimeclass RadioCoverageSimulation
+  {
+    void TestMethod(Double numericArgument);
+
+    RadioCoverageSimulation();
+  }
+}
