@@ -65,7 +65,9 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{4903e92f-b5ff-4658-be9b-f6197d58a1c7}</ProjectGuid>
     <RootNamespace>SignalServerWin</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>    
+    <OutDir>$(ProjectDir)bin\$(Platform\)$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Platform\)$(Configuration)\</IntDir>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
